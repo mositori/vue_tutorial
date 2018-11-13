@@ -72,12 +72,14 @@ var app7 = new Vue({
 var data = { a : 1 };
 var vm = new Vue({
   el: "#example",
-  data: data
+  data: {
+    msg : "Reactive Message",
+    rawHtml: "<span style='color:red'> This should be red!</span> ",
+    ok: false,
+    url: "https://www.google.com"
+  }
 })
 
-vm.$data === data;
-vm.$el === document.getElementById("example");
-
 vm.$watch("a", function(newValue, oldValue) {
-  
+
 })

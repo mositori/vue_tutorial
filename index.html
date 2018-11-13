@@ -54,7 +54,18 @@
 
         <div id="example">
             <p>example</p>
+            <p>Message: {{ msg }} </p>
+            <p v-once>This will never change: {{ msg }} </p>
+            <input v-model="msg">
+
+            <p>Using mustaches: {{ rawHtml }} </p>
+            <p> Using v-html directive: <span v-html="rawHtml"></span> </p>
+            <p> {{ ok ? 'YES' : 'NO' }} </p>
+            <a v-bind:href="url"> ... </a>
+            <input v-model="url">
         </div>
+
+
         <!-- https://vuejs.org/v2/guide/list.html#key -->
         <script src="index.js"></script>
 
