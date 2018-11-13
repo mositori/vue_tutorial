@@ -77,6 +77,11 @@ var vm = new Vue({
     rawHtml: "<span style='color:red'> This should be red!</span> ",
     ok: false,
     url: "https://www.google.com"
+  },
+  computed: {
+    reversedMsg: function(){
+      return this.msg.split("").reverse().join("")
+    }
   }
 })
 
