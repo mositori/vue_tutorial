@@ -64,8 +64,17 @@
             <p> {{ ok ? 'YES' : 'NO' }} </p>
             <a v-bind:href="url"> ... </a>
             <input v-model="url">
+            <template v-if="loginType === 'username'">
+                <label>Username</label>
+                <input placeholder="Enter your username" key="username-input">
+            </template>
+            <template v-else>
+                <label>Email</label>
+                <input placeholder="Enter your email address" key="email-input">
+            </template>
         </div>
 
+        
 
         <!-- https://vuejs.org/v2/guide/list.html#key -->
         <script src="index.js"></script>

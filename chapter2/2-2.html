@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  
+  <div id="app2">
+    <p> {{ items[0].quantity }} </p>
+    <p> フィルターの処理 {{ items[2].price }} to  {{ items[2].price | numberWithDelimiter }}</p>
+    <p> 合計 {{ totalPrice }} ({{ totalPriceWithTax }}) </p>
+    <p v-show="!canBuy"> {{ 100000 | numberWithDelimiter }}円以上で購入いただけます。 </p>
+    <p v-bind:class ="{error: !canBuy}">100000円以上でご購入いただけます。</p>
+    <p v-bind:class ="errorMessageClass">100000円以上でご購入いただけます。</p>
+    <p v-bind:style ="errorMessageStyle">100000円以上でご購入いただけます。(v-style)</p>
+  </div>
+  <script src='2-2.js'></script>
+</body>
