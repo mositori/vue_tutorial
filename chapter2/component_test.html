@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <main id='main'>
   <fruits-list></fruits-list>
+  <fruits-list-extend></fruits-list-extend>
 </main>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
@@ -13,7 +16,16 @@ Vue.component('fruits-list', {
   template: '<div><fruits-list-title></fruits-list-title></div>'
 })
 
+
 new Vue({
   el: '#main'
 })
+
+var FruitsListTitle = Vue.extend({
+  template: '<h1> Extended Fruits List </h1>',
+})
+
+new FruitsListTitle().$mount('#fruits-list-extend')
+
+Vue.component('fruits-list-extend', FruitsListTitle)
 </script>
